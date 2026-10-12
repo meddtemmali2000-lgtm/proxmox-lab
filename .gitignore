@@ -1,0 +1,3 @@
+logs/
+*.log
+scripts/05-create-nutanix-vm.ps1
