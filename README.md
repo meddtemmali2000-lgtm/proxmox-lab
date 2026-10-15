@@ -35,6 +35,7 @@ Plan d'adressage sur VMnet8 :
 | PVE1 | pve1.lab.local  | 192.168.20.11/24 | 10.10.10.11/24   | 8 Go RAM, 4 vCPU, 40 Go système + 30 Go data |
 | PVE2 | pve2.lab.local  | 192.168.20.12/24 | 10.10.10.12/24   | idem                                        |
 | PVE3 | pve3.lab.local  | 192.168.20.13/24 | 10.10.10.13/24   | idem                                        |
+| PBS  | pbs.lab.local   | 192.168.20.14/24 | –                | 2 Go RAM, 2 vCPU, 32 Go système + 64 Go datastore |
 
 VM VMware : `Documents\Virtual Machines\proxmox-lab\PVE{1,2,3}\`
 
@@ -49,6 +50,7 @@ Correspondance grâce aux MAC fixées dans les `.vmx` : `00:50:56:2a:20:1N` = `n
 | `scripts/02-create-pve-vms.ps1`      | non   | Crée les VM PVE1-3 (`-NestedVirt $false` si Hyper-V actif)  |
 | `scripts/03-hyperv-boot-toggle.ps1`  | oui   | Ajoute une entrée de démarrage Windows sans Hyper-V         |
 | `scripts/04-pve-post-install.sh`     | root  | Post-installation d'un nœud : `bash 04-pve-post-install.sh N` |
+| `scripts/06-create-pbs-vm.ps1`       | non   | Crée la VM Proxmox Backup Server                            |
 
 ## Hyper-V / WSL
 
